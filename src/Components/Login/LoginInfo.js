@@ -5,6 +5,7 @@ import { themeContext } from "../../Contexts/ThemeContext";
 export default function LoginInfo() {
     const [theme] = useContext(themeContext);
 
+   
     return (
         <>
             <div style={theme.name === "dark" ? { color: "#fff" } : {color: "#3a3a3a"}} className={styles.loginInfoVerticalText}>

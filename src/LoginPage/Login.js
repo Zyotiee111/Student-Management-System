@@ -1,8 +1,10 @@
-import React, { useContext } from "react";
-import { themeContext } from "../../Contexts/ThemeContext";
+import React, { useContext, useEffect, useState } from "react";
+import { themeContext } from "../Context/ThemeContext";
 import styles from "./Signin.module.css";
-import LoginForm from "./LoginForm";
-import LoginInfo from "./LoginInfo"
+import Loginform from "./Loginform";
+import LoginInfo from "./LoginInfo";
+
+
 
 export default function Login() {
   const [theme] = useContext(themeContext);
@@ -22,17 +24,17 @@ export default function Login() {
           {
             boxShadow: "0px 15px 32px 0px rgba(181,173,243,0.25)"
           }
-      } className={styles.loginContainer}>
-        {/* left */}
-        <div className={styles.loginInfo}>
-          <LoginInfo />
+      } className={styles.login_container}>
+
+        <div className={styles.login_info}>
+          <LoginInfo/>
+         
         </div>
 
-        {/* right */}
-        <div className={styles.loginForm}>
-          <LoginForm />
+        <div className={styles.login_form}>
+          <Loginform />
         </div>
-      </div>
+    </div> 
     </div>
   );
 }
