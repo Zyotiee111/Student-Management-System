@@ -31,6 +31,17 @@ export default function Calender() {
 
   return (
     <>
+     <div className={styles.calender}
+            style={theme.name === "dark" ? {
+                color:'#fff',
+                background:"#2D3436",
+                boxShadow: "0px 12px 18px rgba(1, 1, 1, 0.5)" 
+               } : {
+                    color: "#2D3436",
+                    background: "#fff",
+                    boxShadow: "0px 15px 30px rgba(181, 173, 243, 0.5)",
+                    borderTop: "5px solid #2D3436"
+              }} >
         <h2>{formated_date}</h2>
         <table className={styles.calender_content}>
             <thead>
@@ -54,7 +65,7 @@ export default function Calender() {
             </tbody>
         </table>
 
-
+    </div>
 
     </>
   );

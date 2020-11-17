@@ -32,7 +32,7 @@ export default function HomePage() {
 
     return (
       
-        <div className={styles.homePage} style={homeStyle}>
+        <div className={styles.homepage} style={homeStyle}>
             <div className = {styles.sidebar} style={theme.name === "dark"
             ? {
               background: "#3f484b",
@@ -102,7 +102,7 @@ export default function HomePage() {
                         </div>
                     </section>
                 </div>
-                <div className= {styles.home_content}>
+                <div className= {styles.home_content_wrapup}>
                     <HomeContent/>
 
                 </div>

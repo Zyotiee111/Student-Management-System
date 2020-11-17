@@ -13,11 +13,11 @@
     height: 100%;
 }
 
-.home_content{
+/* .home_content{
     margin: 70px 50px;
     display: flex;
     justify-content: space-between;
-}
+} */
   .sidebar{
     width: 70px;
     height: 100vh;
@@ -79,17 +79,17 @@
     align-items: center;
     
 }
-.home_content{
+.home_content_wrapup{
     margin: 70px 50px;
     display: flex;
     justify-content: space-between;
 }
 
-.wrapup{
-    width: 696px;
+.home_main_content{
+    width: 100%;
     height: 637px;
     display: flex;
-    flex-direction: column;
+ 
     justify-content: space-between;
 }
 
@@ -97,6 +97,7 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
+    margin-bottom: 70px;
 }
 
 .attend_days{
@@ -117,12 +118,12 @@
     padding: 30px 50px;
 }
 .notice_board{
-    width: 30%x;
+    width: 600px;
     height: 638px;
     border-top: 5px solid #fff;
     border-radius: 5px 5px 15px 15px;
-    padding: 30px 50px;
-    margin: 0 60px;
+    padding: 30px 20px;
+    /* margin: 0 20px; */
 }
 .notice_holder{
     width: 100%;
@@ -157,8 +158,8 @@
     border-radius: 5px 5px 15px 15px;
     width: 30%;
     height: 638px;
-    padding: 30px 50px;
-    margin:0 60px ;
+    padding: 30px 20px;
+    /* margin:0 20px ; */
 }
 .activity{
     margin: 20px 0;
