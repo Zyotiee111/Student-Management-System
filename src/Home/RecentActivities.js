@@ -46,12 +46,15 @@ export default function RecentActivities() {
         color: '#fff',
         background:'#3f484b',
         boxShadow: "0px 12px 18px rgba(1, 1, 1, 0.5)",
+
         }
       : {
         color: '#2D3436',
         background: '#fff',
         boxShadow: '0px 10px 25px rgba(181, 173, 243, 0.5)',
-        boxShadow: '0px 15px 30px rgba(181, 173, 243, 0.5)'
+        boxShadow: '0px 15px 30px rgba(181, 173, 243, 0.5)',
+        borderTop: "5px solid #2D3436"
+       
         }}
           >
             <h3>Recent Activities</h3>
