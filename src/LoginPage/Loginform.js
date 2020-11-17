@@ -6,8 +6,9 @@ import styles from "./Signin.module.css";
 import DoubleArrowIcon from "@material-ui/icons/DoubleArrow";
 import { Button } from "@material-ui/core";
 import { themeContext } from "../Context/ThemeContext";
+import {LoginContext} from '../App'
 
-export default function Loginform({setisLoggedIn}){
+export default function Loginform(){
     const [currentTheme, setCurrentTheme] = useState("dark");
     const [theme, dispatchTheme] = useContext(themeContext);
   
@@ -15,12 +16,13 @@ export default function Loginform({setisLoggedIn}){
 
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
-
+    const [isLoggedIn, setisLoggedIn] = useContext(LoginContext)
+   
     const handleSubmit = (e) => {
         e.preventDefault();
         if (username === "admin" && password === "admin123") {
             localStorage.setItem("token", "logged in");
-          setisLoggedIn(true)
+            setisLoggedIn(true)
         }
         setUsername("");
         setPassword("");

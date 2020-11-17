@@ -1,17 +1,19 @@
-import React, {useState} from 'react'
+import React, {useState,createContext} from 'react'
 import { Route, Switch,Redirect,BrowserRouter as Router } from 'react-router-dom'
 import Login from './LoginPage/Login'
 import ThemeContext from './Context/ThemeContext'
-import Home from './Home/Home'
-
+import HomePage from './Home/HomePage'
+export const LoginContext = createContext()
 
 export default function App() {
   const [isLoggedIn, setisLoggedIn] = useState(!1);
+
 
  
  
   return (
     <ThemeContext>
+      <LoginContext.Provider value = {[isLoggedIn,setisLoggedIn]}>
     <Router>
       <Switch>
       <Route
@@ -21,18 +23,19 @@ export default function App() {
               () =>
                 isLoggedIn ?
                   <Redirect to="/home" /> :
-                  <Login  setisLoggedIn = {setisLoggedIn} />} />
+                  <Login  />} />
         <Route
             exact
             path={"/home"}
             render={
               () =>
                 isLoggedIn ?
-                  <Home setisLoggedIn={setisLoggedIn} /> :
+                  <HomePage setisLoggedIn={setisLoggedIn} /> :
                   <Redirect to="/" />} />
                 
       </Switch>
     </Router>
+    </LoginContext.Provider>
   </ThemeContext>
   )
 }
